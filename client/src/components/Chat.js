@@ -5,10 +5,9 @@ import MessageList from './MessageList';
 function Chat({ user }) {
   const { messages } = useMessages();
   const { addMessage } = useAddMessage();
-
+  console.log(messages)
   const handleSend = async (text) => {
     const message = await addMessage(text);
-    console.log('Message added:', message);
   };
 
   return (
